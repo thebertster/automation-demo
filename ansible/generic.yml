@@ -1,0 +1,25 @@
+# code: language=ansible
+---
+tenant_name: "automation-demo"
+cloud_parameters:
+  name: '{{ cloud_name | default("Default-Cloud") }}'
+
+vs_parameters:
+  name: "rc-ansible-demo"
+  fqdn: "rc-ansible-demo.vs.rc.demo.avi.local"
+  ipam_network_subnet:
+    subnet:
+      ip_addr:
+        type: "V4"
+        addr: "100.64.66.0"
+      mask: 24
+  pool_members:
+    - ip:
+        addr: "100.64.67.71"
+        type: "V4"
+    - ip:
+        addr: "100.64.67.72"
+        type: "V4"
+    - ip:
+        addr: "100.64.67.73"
+        type: "V4"

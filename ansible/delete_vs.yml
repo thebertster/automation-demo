@@ -1,0 +1,31 @@
+---
+- name: "Delete Virtual Service"
+  hosts: "localhost"
+  connection: "local"
+  vars_files:
+    - "generic.yml"
+
+  tasks:
+    - name: "Delete VirtualService"
+      vmware.alb.avi_virtualservice:
+        avi_credentials: "{{ avi_credentials }}"
+        api_context: "{{ avi_api_context | default(omit) }}"
+        tenant: "{{ tenant_name }}"
+        name: "{{ vs_parameters.name }}"
+        state: absent
+
+    - name: "Delete Pool"
+      vmware.alb.avi_pool:
+        avi_credentials: "{{ avi_credentials }}"
+        api_context: "{{ avi_api_context | default(omit) }}"
+        tenant: "{{ tenant_name }}"
+        name: '{{ vs_parameters.name + "-pool" }}'
+        state: absent
+
+    - name: "Delete VSVip"
+      vmware.alb.avi_vsvip:
+        avi_credentials: "{{ avi_credentials }}"
+        api_context: "{{ avi_api_context | default(omit) }}"
+        tenant: "{{ tenant_name }}"
+        name: '{{ "vsvip-" + vs_parameters.name + "-" + cloud_parameters.name }}'
+        state: absent
