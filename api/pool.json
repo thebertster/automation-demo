@@ -1,0 +1,29 @@
+{
+    "name": "rc-api-demo-pool",
+    "cloud_ref": "/api/cloud/?name=Default-Cloud",
+    "lb_algorithm": "LB_ALGORITHM_ROUND_ROBIN",
+    "application_persistence_profile_ref": "/api/applicationpersistenceprofile/?name=Persist-PHPSESSID",
+    "health_monitor_refs": [
+        "/api/healthmonitor/?name=System-HTTP"
+    ],
+    "servers": [
+        {
+            "ip": {
+                "addr": "100.64.67.71",
+                "type": "V4"
+            }
+        },
+        {
+            "ip": {
+                "addr": "100.64.67.72",
+                "type": "V4"
+            }
+        },
+        {
+            "ip": {
+                "addr": "100.64.67.73",
+                "type": "V4"
+            }
+        }
+    ]
+}

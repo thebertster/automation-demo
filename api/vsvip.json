@@ -1,0 +1,25 @@
+{
+    "name": "vsvip-rc-api-demo",
+    "cloud_ref": "/api/cloud/?name=Default-Cloud",
+    "vip": [
+        {
+            "enabled": true,
+            "auto_allocate_ip": true,
+            "ipam_network_subnet": {
+                "subnet": {
+                    "ip_addr": {
+                        "type": "V4",
+                        "addr": "100.64.66.0"
+                    },
+                    "mask": 24
+                }
+            },
+            "vip_id": 0
+        }
+    ],
+    "dns_info": [
+        {
+            "fqdn": "rc-api-demo.vs.rc.demo.avi.local"
+        }
+    ]
+}

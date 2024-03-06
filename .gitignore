@@ -3,3 +3,4 @@ terraform.tfstate
 terraform.tfstate.backup
 .terraform
 ansible/rc-controller-1a.yml
+api/cookie-jar

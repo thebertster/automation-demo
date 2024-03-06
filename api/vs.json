@@ -1,0 +1,36 @@
+{
+    "name": "rc-api-demo",
+    "vsvip_ref": "/api/vsvip/?name=vsvip-rc-api-demo",
+    "pool_ref": "/api/pool/?name=rc-api-demo-pool",
+    "cloud_ref": "/api/cloud/?name=Default-Cloud",
+    "application_profile_ref": "/api/applicationprofile/?name=System-Secure-HTTP",
+    "services": [
+        {
+            "port": 80,
+            "enable_ssl": false
+        },
+        {
+            "port": 443,
+            "enable_ssl": true
+        }
+    ],
+    "enabled": true,
+    "se_group_ref": "/api/serviceenginegroup/?name=Default-Group",
+    "ssl_key_and_certificate_refs": [
+        "/api/sslkeyandcertificate/?name=Wildcard-ECDSA-Cert",
+        "/api/sslkeyandcertificate/?name=Wildcard-RSA-Cert"
+    ],
+    "ssl_profile_ref": "/api/sslprofile/?name=System-Standard",
+    "analytics_policy": {
+        "all_headers": true,
+        "client_insights": "NO_INSIGHTS",
+        "full_client_logs": {
+            "duration": 0,
+            "enabled": true,
+            "throttle": 10
+        }
+    },
+    "metrics_realtime_update": {
+        "enabled": false
+    }
+}
