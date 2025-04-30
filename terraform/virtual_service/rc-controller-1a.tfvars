@@ -1,10 +1,10 @@
-avi_controller     = "10.206.112.60"
+avi_controller     = "10.6.248.91"
 avi_username       = "admin"
 avi_tenant         = "automation-demo"
 avi_cloud          = "Default-Cloud"
-avi_version        = "22.1.6"
+avi_version        = "30.2.2"
 
-vip_network        = "vxw-dvs-34-virtualwire-62-sid-6120061-wdc-06-vc12-avi-dev058"
-vip_subnet         = "100.64.66.0"
+vip_network        = "ams-cm2w1-nsx1-avi-66-66"
+vip_subnet         = "100.66.66.0"
 vip_subnet_masklen = 24
-pool_servers       = [ "100.64.67.71", "100.64.67.72", "100.64.67.73" ]
+pool_servers       = [ "100.66.67.201", "100.66.67.202", "100.66.67.203" ]

@@ -1,6 +1,7 @@
 resource "avi_pool" "pool_tf_vs" {
   cloud_ref = data.avi_cloud.vs_cloud.id
   name      = "${var.vs_name}-pool"
+  default_server_port = 80
 
   dynamic "servers" {
     for_each = var.pool_servers

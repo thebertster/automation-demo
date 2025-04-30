@@ -5,3 +5,6 @@ terraform.tfstate.backup
 ansible/rc-controller-*.yml
 api/cookie-jar
 test*
+env
+.ansible
+.vscode

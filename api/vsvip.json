@@ -9,7 +9,7 @@
                 "subnet": {
                     "ip_addr": {
                         "type": "V4",
-                        "addr": "100.64.66.0"
+                        "addr": "100.66.66.0"
                     },
                     "mask": 24
                 }
@@ -19,7 +19,7 @@
     ],
     "dns_info": [
         {
-            "fqdn": "rc-api-demo.vs.rc.demo.avi.local"
+            "fqdn": "rc-api-demo.vs2.rc.demo.internal"
         }
     ]
 }

@@ -20,6 +20,13 @@
         "/api/sslkeyandcertificate/?name=Wildcard-ECDSA-Cert",
         "/api/sslkeyandcertificate/?name=Wildcard-RSA-Cert"
     ],
+    "network_security_policy_ref": "/api/networksecuritypolicy/?name=admin-policy",
+    "http_policies": [
+        {
+            "index": 11,
+            "http_policy_set_ref": "/api/httppolicyset/?name=admin-policy"
+        }
+    ],
     "ssl_profile_ref": "/api/sslprofile/?name=System-Standard",
     "analytics_policy": {
         "all_headers": true,

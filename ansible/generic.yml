@@ -11,15 +11,15 @@ vs_parameters:
     subnet:
       ip_addr:
         type: "V4"
-        addr: "100.64.66.0"
+        addr: "100.66.66.0"
       mask: 24
   pool_members:
     - ip:
-        addr: "100.64.67.71"
+        addr: "100.66.67.201"
         type: "V4"
     - ip:
-        addr: "100.64.67.72"
+        addr: "100.66.67.202"
         type: "V4"
     - ip:
-        addr: "100.64.67.73"
+        addr: "100.66.67.203"
         type: "V4"

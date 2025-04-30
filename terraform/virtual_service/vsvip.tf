@@ -15,4 +15,7 @@ resource "avi_vsvip" "vsvip_tf_vs" {
         }
     }
   }
+  lifecycle {
+    ignore_changes = [ vip[0].discovered_networks ]
+  }
 }

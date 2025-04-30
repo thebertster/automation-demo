@@ -1,9 +1,9 @@
 #!/bin/bash
 
-AVI_CONTROLLER_IP="10.206.112.60"
+AVI_CONTROLLER_IP="10.6.248.91"
 AVI_USERNAME="admin"
 AVI_TENANT_NAME="automation-demo"
-AVI_VERSION="22.1.5"
+AVI_VERSION="30.2.2"
 
 echo -n Password:
 read -s AVI_PASSWORD

@@ -1,5 +1,6 @@
 resource "avi_virtualservice" "vs_tf_vs" {
   cloud_ref = data.avi_cloud.vs_cloud.id
+  cloud_type = "CLOUD_VCENTER"
   name      = var.vs_name
 
   vsvip_ref = avi_vsvip.vsvip_tf_vs.id
@@ -7,9 +8,11 @@ resource "avi_virtualservice" "vs_tf_vs" {
   application_profile_ref = data.avi_applicationprofile.system_http_ap.id
   services {
     port = 80
+    port_range_end = 80
   }
   services {
     port = 443
+    port_range_end = 443
     enable_ssl = true
   }
   ssl_profile_ref = data.avi_sslprofile.standard_sslprofile.id
