@@ -27,8 +27,8 @@ resource "avi_gslbservice" "gslb_service" {
     priority = 10
     algorithm = "GSLB_ALGORITHM_ROUND_ROBIN"
     members {
-      cluster_uuid = data.avi_cluster.site1_cluster.id
-      vs_uuid = avi_virtualservice.site1_vs_tf_vs.id
+      cluster_uuid = data.avi_cluster.site1_cluster.uuid
+      vs_uuid = avi_virtualservice.site1_vs_tf_vs.uuid
       ip {
         type = "V4"
         addr = tolist(avi_vsvip.site1_vsvip_tf_vs.vip[0].ip_address)[0].addr
@@ -37,8 +37,8 @@ resource "avi_gslbservice" "gslb_service" {
       ratio = 1
     }
     members {
-      cluster_uuid = data.avi_cluster.site2_cluster.id
-      vs_uuid = avi_virtualservice.site2_vs_tf_vs.id
+      cluster_uuid = data.avi_cluster.site2_cluster.uuid
+      vs_uuid = avi_virtualservice.site2_vs_tf_vs.uuid
       ip {
         type = "V4"
         addr = tolist(avi_vsvip.site2_vsvip_tf_vs.vip[0].ip_address)[0].addr
