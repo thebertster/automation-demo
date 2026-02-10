@@ -10,3 +10,4 @@
         name: vmware.alb.aviconfig
       vars:
         avi_config_file: "./aviconfig.yml"
+        avi_role_state_mode: "present"
