@@ -10,7 +10,7 @@ read -s AVI_PASSWORD
 echo
 
 echo "Call login API..."
-curl -k -i -c ./cookie-jar -H "X-Avi-Version: $AVI_VERSION" -H "X-Avi-Tenant: $AVI_TENANT_NAME" -H "Content-Type: application/json" -d '{"username": "'$AVI_USERNAME'", "password": "'$AVI_PASSWORD'"}' -x POST "https://$AVI_CONTROLLER_IP/login"
+curl -k -i -c ./cookie-jar -H "X-Avi-Version: $AVI_VERSION" -H "X-Avi-Tenant: $AVI_TENANT_NAME" -H "Content-Type: application/json" -d '{"username": "'$AVI_USERNAME'", "password": "'$AVI_PASSWORD'"}' -X POST "https://$AVI_CONTROLLER_IP/login"
 
 AVI_CSRF_TOKEN=$(sed -nr "s/.*csrftoken\s+(.*)$/\1/p" ./cookie-jar)
 
